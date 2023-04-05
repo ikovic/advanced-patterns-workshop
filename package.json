@@ -8,14 +8,19 @@
     "@types/node": "^18.6.5",
     "chokidar": "^3.5.3",
     "cross-fetch": "^3.1.5",
-    "typescript": "^4.8.3",
-    "vitest": "^0.21.1"
+    "jsdom": "^21.1.1",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.3",
+    "vite-tsconfig-paths": "^4.0.7",
+    "vitest": "^0.29.8"
   },
   "scripts": {
     "exercise": "node scripts/exercise.js",
     "e": "npm run exercise",
     "solution": "cross-env SOLUTION=true node scripts/exercise.js",
     "s": "npm run solution",
+    "ci": "(cd scripts/tests && npx vitest run)",
+    "update-snapshots": "(cd scripts/tests && npx vitest run -u)",
     "prepare": "node ./scripts/prepare-stackblitz.js",
     "e-02": "npm run exercise -- 02",
     "s-02": "npm run solution -- 02",
